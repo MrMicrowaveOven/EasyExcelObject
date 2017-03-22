@@ -2,21 +2,24 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AppSkeleton</title>
+    <title>EasyExcelObject</title>
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <script type="text/javascript" src="translate.js"></script>
   </head>
   <body>
     <div class="description">
-    Empty description
+    This app is designed to make it easier to translate Excel spreadsheet data into a JSON.
+
+    Separate different pastes with a "-".
     </div>
     <div class="application">
       <br>
-      <label class="field">Empty field
+      <label class="field"><textarea id="inputField" rows="20" cols="200"></textarea>
       </label>
 
-      <button class="button inheritFont">Blank button</button>
+      <button class="button inheritFont" onclick="translateText()">Give me a JSON!</button>
       <div class="response" id="response"></div>
     </div>
     <div class= "portfolioLinks" id="portfolioLinks">
