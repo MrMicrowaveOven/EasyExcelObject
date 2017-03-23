@@ -3,7 +3,9 @@ function translateText() {
   var commadText = copiedText.replace(/\n/g,",")
   var separateArrays = commadText.split("-");
   for (var i = 0; i < separateArrays.length; i++) {
-    separateArrays[i] = separateArrays[i].split(",").sort();
+    separateArrays[i] = separateArrays[i].split(",").sort(function(a,b) {
+      return(a - b)
+    });
   }
   // Convert the numStrings in the arrays into actual numbers
   for (var i = 0; i < separateArrays.length; i++) {
